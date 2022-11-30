@@ -1,0 +1,37 @@
+{% extends 'base.html'  %}
+
+{% block title %}
+    Register page
+{% endblock %}
+
+{% block content %}
+    <body class="text-center">
+        <div class="container">
+            <form method="POST" class="form-register" style="color:white;">
+                <img src="https://www.asiamiles.com/content/dam/am-content/brand-v2/professional-pillar/logo-image/Vertical%20Wordmark_Preface%20Coding.png/jcr:content/renditions/cq5dam.resize.390.234.png">
+                <br>
+
+                {{ form.username.label() }}
+                {{ form.username(class = 'form-control', placeholder="User Name") }}
+
+                {{ form.email_address.label() }}
+                {{ form.email_address(class = 'form-control', placeholder="User Email") }}
+
+                {{ form.password1.label() }}
+                {{ form.password1(class = 'form-control', placeholder="Password") }}
+
+                {{ form.password2.label() }}
+                {{ form.password2(class = 'form-control', placeholder="Confirm Password") }}
+
+                <br>
+                <div class="mb-3"> 
+                    <h6>Already have an account?</h6>
+                    <a class="btn btn-sm btn-secondary" href="#"> Login</a>
+                </div>
+                
+                {{ form.submit(class = 'btn btn-lg btn-block btn-primary') }}
+
+            </form>
+        </div>
+    </body>
+{% endblock %}
